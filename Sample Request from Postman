@@ -1,0 +1,85 @@
+{
+  "resource": "/",
+  "path": "/",
+  "httpMethod": "POST",
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Content-Type": "application/json",
+    "Host": "q6ubmhxx24.execute-api.us-west-2.amazonaws.com",
+    "Postman-Token": "5f2de39e-2466-4d09-bc71-e0470e620052",
+    "User-Agent": "PostmanRuntime/7.32.3",
+    "X-Amzn-Trace-Id": "Root=1-64b8b08a-2bb2dfc12a48da3d4183c07a",
+    "X-Forwarded-For": "108.228.10.113",
+    "X-Forwarded-Port": "443",
+    "X-Forwarded-Proto": "https"
+  },
+  "multiValueHeaders": {
+    "Accept": [
+      "*/*"
+    ],
+    "Accept-Encoding": [
+      "gzip, deflate, br"
+    ],
+    "Content-Type": [
+      "application/json"
+    ],
+    "Host": [
+      "q6ubmhxx24.execute-api.us-west-2.amazonaws.com"
+    ],
+    "Postman-Token": [
+      "5f2de39e-2466-4d09-bc71-e0470e620052"
+    ],
+    "User-Agent": [
+      "PostmanRuntime/7.32.3"
+    ],
+    "X-Amzn-Trace-Id": [
+      "Root=1-64b8b08a-2bb2dfc12a48da3d4183c07a"
+    ],
+    "X-Forwarded-For": [
+      "108.228.10.113"
+    ],
+    "X-Forwarded-Port": [
+      "443"
+    ],
+    "X-Forwarded-Proto": [
+      "https"
+    ]
+  },
+  "queryStringParameters": null,
+  "multiValueQueryStringParameters": null,
+  "pathParameters": null,
+  "stageVariables": null,
+  "requestContext": {
+    "resourceId": "rszse0kv0f",
+    "resourcePath": "/",
+    "httpMethod": "POST",
+    "extendedRequestId": "IWCFtFtzPHcF9Lw=",
+    "requestTime": "20/Jul/2023:03:56:58 +0000",
+    "path": "/Testing",
+    "accountId": "491376963111",
+    "protocol": "HTTP/1.1",
+    "stage": "Testing",
+    "domainPrefix": "q6ubmhxx24",
+    "requestTimeEpoch": 1689825418696,
+    "requestId": "47e8cb7b-9df1-4b74-96d4-355d15441695",
+    "identity": {
+      "cognitoIdentityPoolId": null,
+      "accountId": null,
+      "cognitoIdentityId": null,
+      "caller": null,
+      "sourceIp": "108.228.10.113",
+      "principalOrgId": null,
+      "accessKey": null,
+      "cognitoAuthenticationType": null,
+      "cognitoAuthenticationProvider": null,
+      "userArn": null,
+      "userAgent": "PostmanRuntime/7.32.3",
+      "user": null
+    },
+    "domainName": "q6ubmhxx24.execute-api.us-west-2.amazonaws.com",
+    "apiId": "q6ubmhxx24"
+  },
+  "body": "{\r\n    \"action\": \"Livestreaming on AWS\"\r\n}",
+  "isBase64Encoded": false
+}

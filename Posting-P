@@ -1,0 +1,46 @@
+import json
+from urllib.parse import parse_qs
+
+def lambda_handler(event, context):
+    # Create response
+    response = {
+        'statusCode': 200,
+        'body': ''
+    }
+    
+    try:
+        # Check the Content-Type header to determine the data format
+        content_type = event.get('headers', {}).get('Content-Type', '')
+
+        if content_type.lower() == 'application/json':
+            # JSON data: Parse the JSON body into a dictionary
+            body = json.loads(event['body'])
+        elif content_type.lower() == 'application/x-www-form-urlencoded':
+            # URL-encoded data: Parse the URL-encoded body into a dictionary
+            body = parse_qs(event['body'])
+            # Process values as lists if there are multiple occurrences for the same key
+            for key, value in body.items():
+                if len(value) == 1:
+                    body[key] = value[0]
+                else:
+                    body[key] = value
+        else:
+            # Unsupported content type
+            return {
+                'statusCode': 400,
+                'body': json.dumps('Error: Unsupported Content-Type.')
+            }
+
+        # Access the value associated with the key "Action"
+        action_value = body.get('Action', '')
+
+        # Set response's body to the value of key "Action"
+        response['body'] = json.dumps(action_value)
+        
+        # Return a response if needed
+        return response
+    except Exception as e:
+        return {
+            'statusCode': 400,
+            'body': json.dumps(f'Error: {str(e)}')
+        }
